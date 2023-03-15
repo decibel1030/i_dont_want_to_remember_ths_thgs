@@ -1,0 +1,6 @@
+pip~=23.0
+attrs~=22.2.0
+wheel~=0.38.4
+setuptools~=63.2.0
+pyparsing~=3.0.9
+aiogram~=2.25.1

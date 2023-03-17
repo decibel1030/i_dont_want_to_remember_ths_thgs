@@ -1,6 +1,6 @@
 import time
 # token
-BOT_TOKEN = "6276241260:AAFJjMCgU6P-giS8ni4BIGxNA9Kk9pM8Wuo"
+BOT_TOKEN = "BOT TOKEN"
 # main func
 
 

@@ -21,7 +21,7 @@ class Advisor:
         @dp.message_handler(Text(equals=f"{buttons[0]}"))
         async def show_data(message: types.Message):
             text = f"⏸День: {data.this_day_location}\n💬Название: {data.this_day}\n\n" \
-                   f"▶Следующий день: {data.next_day}\n 💬Название: {data.next_day_location}"
+                   f"▶Следующий день: {data.next_day_location}\n 💬Название: {data.next_day}"
             await bot.send_message(chat_id=message.chat.id, text=text)
 
         @dp.message_handler(Text(equals=f"{buttons[1]}"))
@@ -30,6 +30,10 @@ class Advisor:
                    f"▶Следующий месяц: {data.next_month_location}\n💬Название: {data.next_month}"
             await bot.send_message(chat_id=message.chat.id, text=text)
 
+        @dp.message_handler(Text(equals=f"{buttons[3]}"))
+        async def show_data(message: types.Message):
+            text = Data().getLesson()
+            await message.answer(text=text)
         self.bot = bot
         self.dp = dp
 

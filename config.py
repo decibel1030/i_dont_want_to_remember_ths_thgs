@@ -71,6 +71,7 @@ class Data:
     def getLesson(self):
         from datetime import time
         text = f"Пара: "
+
         if Data().isLesson(time(8, 0, 0), time(9, 30, 0)):
             text += f"1\nДо перемены: {Data().getRemaining(time(9, 30, 0))} мин"
         elif Data().isLesson(time(9, 40, 0), time(11, 10, 0)):
